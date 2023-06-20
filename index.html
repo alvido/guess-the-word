@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вгадай слово</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Вгадай слово</h1>
+        <label for="lengthInput">
+            Кількість літер (від 1 до 11):
+            <input type="number" id="lengthInput" min="3" max="11" value="4">
+        </label>
+        <nav class="nav">
+            <button id="startBtn" onclick="startGame()">Розпочати гру</button>
+            <button id="stopBtn" onclick="breakGame()">Завершити гру</button>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="wraper">
+            <div id="gameContainer">
+                <p id="attempts"></p>
+                <label for="wordInput">
+                    Введіть слово:
+                    <input type="text" id="wordInput" autocomplete="off">
+                    <button id="submitBtn">Підтвердити</button>
+                </label>
+                
+                <div id="historyContainer"></div>
+            </div>  
+        </section>
+              
+    </main>
+    <footer class="footer"></footer>
+
+    <script src="script.js"></script>
+    
+    </body>
+    </html>
